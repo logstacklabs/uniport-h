@@ -1,0 +1,12 @@
+name = "Uniport-H"
+license = "CC BY-NC-SA 4.0"
+licenselink = "https://github.com/msio808/uniport-h/blob/main/LICENSE"
+description = "A simple, lightweight & customizable, HUGO portfolio theme."
+homepage = "https://github.com/msio808/uniport-h.git"
+tags = ["clean", "starter", "about me", "onepage", "portfolio", "personal"]
+features = ["Single Page Layout", "Lightweight", "RSS Integration", "Google Analytics Support"]
+min_version = "0.41.0"
+
+[author]
+  name = "Muhammed A."
+  homepage = "https://msio.me"
