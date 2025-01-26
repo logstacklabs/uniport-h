@@ -60,6 +60,9 @@ After completing the steps above, visit your site at [localhost:1313](http://loc
 ## 🍰 Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) 
 
+## Status
+- 🟡 In Progress
+
 ## 🛡️ License:
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
     <a property="dct:title" rel="cc:attributionURL" href="https://github.com/msio808/uniport-h.git">This project</a>
@@ -78,5 +81,5 @@ After completing the steps above, visit your site at [localhost:1313](http://loc
     </a>
 </p>
 
-## Acknowledgement
-- The theme and community behind [Hugo](https://gohugo.io)
+## 🙏 Acknowledgement
+- The team and community behind [Hugo](https://gohugo.io)
