@@ -18,6 +18,12 @@ UniPort is a lightweight customizable one-page portfolio theme built for [Hugo](
 ## 🚀 Demo
 - Demo [link](#)
 
+|DARK|LIGHT|
+|-|-|
+|![](./img/dim.png)|![](./img/light.png)|
+
+
+
 ![](screenshot.png)
 
 ## 🧐 Features
