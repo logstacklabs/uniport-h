@@ -1,30 +1,28 @@
+<div style="text-align:center;">
+
 ![uniport-h](https://socialify.git.ci/msio808/uniport-h/image?custom_description=&description=1&font=Rokkitt&forks=1&issues=1&language=1&name=1&owner=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto)
-
-
-
-<span style="text-align:center;">
-
 ![](https://img.shields.io/badge/HUGO-white?logo=hugo)
 ![](https://img.shields.io/badge/HTML5-white?logo=html5)
 ![](https://img.shields.io/badge/CSS3-blue?logo=css3)
 ![](https://img.shields.io/badge/JS-black?logo=javascript)
 ![](https://img.shields.io/badge/MD-black?logo=markdown)
 
-</span>
-
 # Uniport-H
+
+</div>
+
+<div style="font-size: medium">
+
 UniPort is a lightweight customizable one-page portfolio theme built for [Hugo](https://gohugo.io/).
+
+</div>
 
 ## 🚀 Demo
 - Demo [link](#)
 
-|DARK|LIGHT|
-|-|-|
-|![](./img/dim.png)|![](./img/light.png)|
-
-
-
-![](screenshot.png)
+| POLAR NIGHT                | SNOW STORM                |
+|----------------------------|---------------------------|
+| ![](./img/polar-night.png) | ![](./img/snow-storm.png) |
 
 ## 🧐 Features
 - Customizable
@@ -58,13 +56,14 @@ $ hugo server -t uniport-h
 After completing the steps above, visit your site at [localhost:1313](http://localhost:1313).
 
 ## 🍰 Contributing
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) 
 
-## Status
+## ⏳ Progress Report
 - 🟡 In Progress
+- 📅 10/Feb/2025
 
 ## 🛡️ License:
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+<p xmlns:cc="https://creativecommons.org/ns#" xmlns:dct="https://purl.org/dc/terms/">
     <a property="dct:title" rel="cc:attributionURL" href="https://github.com/msio808/uniport-h.git">This project</a>
     <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://msio.me" ></a>
     is licensed under
@@ -82,4 +81,5 @@ After completing the steps above, visit your site at [localhost:1313](http://loc
 </p>
 
 ## 🙏 Acknowledgement
+- The team behind [NordTheme](https://www.nordtheme.com/)
 - The team and community behind [Hugo](https://gohugo.io)
