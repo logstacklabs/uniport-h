@@ -34,7 +34,10 @@ UniPort is a lightweight customizable one-page portfolio theme built for [Hugo](
 
 ## 🛠️ Setup
 
-> Make sure you have Hugo & Git installed.
+> ### Prerequisites:
+> - Git
+> - nodejs & npm
+> - Hugo _(minimum v0.123.0)_
 
 ```sh
 $ hugo new site my-site && cd my-site/
@@ -58,9 +61,9 @@ After completing the steps above, visit your site at [localhost:1313](http://loc
 ## 🍰 Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) 
 
-## ⏳ Progress Report
+## ⏳ Status
 - 🟡 In Progress
-- 📅 10/Feb/2025
+- 📅 16/Feb/2025
 
 ## 🛡️ License:
 <p xmlns:cc="https://creativecommons.org/ns#" xmlns:dct="https://purl.org/dc/terms/">
