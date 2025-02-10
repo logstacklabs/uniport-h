@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build-favicons": "node static/js/favicons.js",
+    "postinstall": "npm install sharp",
+    "hugo-build": "npm run build-favicons && hugo"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
