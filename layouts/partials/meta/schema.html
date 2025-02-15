@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  {{- printf "\"%s\": \"%s\"," "url" .Site.BaseURL | safeJS -}}
+  {{- with .Site.Params -}}
+      {{- printf "\"%s\": \"%s %s\"" "name" .FirstName .LastName | safeJS -}}
+      {{- printf "\"%s\": \"%s\"," "image" "img/avatar.png" | safeJS -}}
+      {{- printf "\"%s\": \"%s\"," "description" .SiteDescription | safeJS -}}
+      {{- if (and .Jobtitle .Organization) -}}
+          {{- printf "\"jobTitle\": \"%s\"," .JobTitle | safeJS -}}
+          "worksFor": {
+            {{- printf "\"%s\": \"%s\"," "@type" "Organization" | safeJS -}}
+            {{- printf "\"%s\": \"%s\"" "name" .Organization | safeJS -}}
+          },
+      {{- end -}}
+      {{- if (and .Education .Institution) -}}
+        "alumniOf": {
+            {{- printf "\"%s\": \"%s\"," "@type" "CollegeOrUniversity" | safeJS -}}
+            {{- printf "\"%s\": \"%s\"," "name" .Institution | safeJS -}}
+            {{- printf "\"%s\": \"%s\"" "degree" .Education | safeJS -}}
+        },
+      {{- end -}}
+      "sameAs": [
+        {{- $len := len .Socials -}}
+        {{- range $key, $social := .Socials -}}
+            {{- printf "\"%s\"" $social | safeJS -}}
+            {{- $len = sub $len 1 -}}
+            {{- if gt $len 0 -}}
+              {{- printf "," | safeJS -}}
+            {{- end -}}
+        {{- end -}}
+      ],
+      "knowsAbout": [
+        {{- $len := len .Skills -}}
+        {{- range .Skills -}}
+            {{- printf "\"%s\"" . | safeJS -}}
+            {{- $len = sub $len 1 -}}
+            {{- if gt $len 0 -}}
+              {{- printf ", " | safeJS -}}
+            {{- end -}}
+        {{- end -}}
+      ]
+  {{- end -}}
+  }
+</script>
