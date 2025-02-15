@@ -7,4 +7,9 @@
 /dataSources/
 /dataSources.local.xml
 
-.idea/*
+/codeStyles
+/inspectionProfiles
+/jsLibraryMappings.xml
+
+../node_modules/
+../package-lock.json
