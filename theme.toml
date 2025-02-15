@@ -1,10 +1,12 @@
 name = "Uniport-H"
-license = "CC BY-NC-SA 4.0"
-licenselink = "https://github.com/msio808/uniport-h/blob/main/LICENSE"
+version = "1.0.0"
 description = "A simple, lightweight & customizable, HUGO portfolio theme."
 homepage = "https://github.com/msio808/uniport-h.git"
-tags = ["clean", "starter", "about me", "onepage", "portfolio", "personal"]
-features = ["Single Page Layout", "Lightweight", "RSS Integration", "Google Analytics Support"]
+license = "CC BY-NC-SA 4.0"
+licenselink = "https://github.com/msio808/uniport-h/blob/main/LICENSE"
+tags = [ "clean", "starter", "onepage", "about me", "personal", "portfolio" ]
+features = [ "Lightweight", "RSS Integration", "Single Page Layout", "Google Analytics Support" ]
+
 min_version = "0.123.0"
 
 [author]

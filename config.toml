@@ -1,0 +1,71 @@
+baseURL = "" # Replace with your domain
+languageCode = "" # Example: en_US, tr_TR...etc.
+title = "" # Replace with the title of your site
+
+# NOTE:
+#   Values must be provided to the following parameters before running your site
+#   - FirstName, LastName, Skills, JobTitle, SiteDescription and Profile Summary.
+# ----------------------------------------------------------------------------------------
+# The default site title is written as "First Name | Job Title"
+# If you want to use custom site title with the title parameter above
+# then change the value of the parameter 'defaultTitle' to true.
+[params]
+    defaultTitle = false
+
+    FirstName = ""
+    LastName = ""
+    Skills = [ "", "" ]
+    SiteDescription = ""
+
+    JobTitle = ""
+    Organization = ""
+
+    Education = ""
+    Institution = ""
+
+# Rename your avatar to avatar.png and logo to brand.png.
+# place them in the `static/img` directory then run the npm install command
+# If you want to link your resume, name the resume file `resume.pdf`
+# And place the file in the `static/resources` directory.
+
+[params.Profile]
+    Greetings = "Howdy!"
+    Summary = [
+        "Paragraph 1",
+        "Paragraph 2"
+    ]
+    Email = ""
+
+[params.rssFeed]
+# If you have a blog that you want to embed to your site
+# Specify the RSS feed url of your blog (ie: https://blog.com/feed.xml)
+# The 3 most recent post from your site will be displayed.
+    Url = ""
+
+[params.Socials]
+# Place your entire social url as shown below.
+    GitHub = "https://github.com/your_handle"
+# If you don't want to display a social icon, leave it empty ''
+    LinkedIn = ""
+# If you want to add more social links to it, makesure the icons are available
+# in the fontawesome fab / fa-brand icon repository.
+
+[params.Footer]
+# Name to show in the copyright message
+    ccName = ""
+# Displays: ©️${CurrentYear}, ${YourName}. Some Rights Reserved
+
+[params.googleAnalytics]
+# Replace the id below with your google analytics measurement ID
+    Id = "G-XXXXXXXXXX"
+
+
+
+# Do not edit
+[outputs]
+    home = ["HTML", "RSS"]
+[minify]
+    minifyOutput = true
+enableRobotsTXT = true
+enableFingerprinting = true
+[taxonomies]
