@@ -23,7 +23,7 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 - Supports dark & light mode
 
 ## 🚀 Demo
-- Demo [links](#) will be added.
+- Demo [link 🔗](http://uniporth-demo.pages.dev/)
 
 | 📸 Screenshots                   |
 |----------------------------------|
