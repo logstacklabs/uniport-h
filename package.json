@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "A simple, lightweight & customizable, HUGO portfolio theme.",
     "scripts": {
-        "postinstall": "node static/js/icons.min.js",
-        "favicons": "node static/js/icons.min.js",
+        "postinstall": "node icons.min.js",
+        "favicons": "node icons.min.js",
         "preview": "hugo server",
         "build": "hugo"
     },
