@@ -58,7 +58,7 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 
 After completing any of the steps above:
 - In the `static/img` directory, place your avatar namef avatar.png & logo named brand.png.
-- copy the [config.toml](../config.toml) file to your site's root directory.
+- copy the **`config.toml`** file to your site's root directory.
 
 <details>
 <summary style="font-size: 1rem;">📝 Click to view the <b>config.toml</b> file</summary>
