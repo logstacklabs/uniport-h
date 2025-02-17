@@ -1,7 +1,7 @@
 <div style="text-align:center;">
 <!--![uniport-h](https://socialify.git.ci/msio808/uniport-h/image?custom_description=&description=1&font=Rokkitt&forks=1&issues=1&language=1&name=1&owner=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto)-->
+<img src="https://socialify.git.ci/msio808/uniport-h/image?description=1&font=Rokkitt&forks=1&issues=1&language=1&logo=https%3A%2F%2Fgohugo.io%2Fimages%2Fhugo-logo-wide.svg&name=1&owner=1&pattern=Brick+Wall&pulls=1&stargazers=1&theme=Auto" alt="uniport-h" width="640" height="320" />
     <p>
-        <img src="https://socialify.git.ci/msio808/uniport-h/image?custom_description=&description=1&font=Rokkitt&forks=1&issues=1&language=1&name=1&owner=1&pattern=Floating+Cogs&pulls=1&stargazers=1&theme=Auto" alt="uniport-h">
         <img src="https://img.shields.io/badge/HUGO-white?logo=hugo" alt="">
         <img src="https://img.shields.io/badge/HTML5-white?logo=html5" alt="">
         <img src="https://img.shields.io/badge/CSS3-blue?logo=css3" alt="">
@@ -23,7 +23,9 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 - Supports dark & light mode
 
 ## 🚀 Demo
-- Demo [link 🔗](http://uniporth-demo.pages.dev/)
+- Demo [links]()
+  - [🔗 Demo website](https://uniport-h.msio.me/)
+  - [🔗 My own website](https://msio.me/)
 
 | 📸 Screenshots                   |
 |----------------------------------|
@@ -56,9 +58,89 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 
 After completing any of the steps above:
 - In the `static/img` directory, place your avatar namef avatar.png & logo named brand.png.
-- If you chose option 2:
-  - copy the [config.toml](../config.toml) file to your site's root directory.
-  - Execute the following command
+- copy the [config.toml](../config.toml) file to your site's root directory.
+
+<details>
+<summary style="font-size: 1rem;">📝 Click to view the <b>config.toml</b> file</summary>
+
+```toml
+
+baseURL = "" # Replace with your domain
+languageCode = "" # Example: en_US, tr_TR...etc.
+title = "" # Replace with the title of your site
+
+# NOTE:
+#   Values must be provided to the following parameters before running your site
+#   - FirstName, LastName, Skills, JobTitle, SiteDescription and Profile Summary.
+# ----------------------------------------------------------------------------------------
+# The default site title is written as "First Name | Job Title"
+# If you want to use custom site title with the title parameter above
+# then change the value of the parameter 'defaultTitle' to true.
+[params]
+defaultTitle = false
+
+    FirstName = ""
+    LastName = ""
+    Skills = [ "", "" ]
+    SiteDescription = ""
+
+    JobTitle = ""
+    Organization = ""
+
+    Education = ""
+    Institution = ""
+
+# Rename your avatar to avatar.png and logo to brand.png.
+# place them in the `static/img` directory then run the npm install command
+# If you want to link your resume, name the resume file `resume.pdf`
+# And place the file in the `static/resources` directory.
+
+[params.Profile]
+Greetings = "Howdy!"
+Summary = [
+"Paragraph 1",
+"Paragraph 2"
+]
+Email = ""
+
+[params.rssFeed]
+# If you have a blog that you want to embed to your site
+# Specify the RSS feed url of your blog (ie: https://blog.com/feed.xml)
+# The 3 most recent post from your site will be displayed.
+    Url = ""
+
+[params.Socials]
+# Place your entire social url as shown below.
+    GitHub = "https://github.com/your_handle"
+# If you don't want to display a social icon, leave it empty ''
+    LinkedIn = ""
+# If you want to add more social links to it, makesure the icons are available
+# in the fontawesome fab / fa-brand icon repository.
+
+[params.Footer]
+# Name to show in the copyright message
+    ccName = ""
+# Displays: ©️${CurrentYear}, ${YourName}. Some Rights Reserved
+
+[params.googleAnalytics]
+# Replace the id below with your google analytics measurement ID
+    Id = "G-XXXXXXXXXX"
+
+
+
+# Do not edit
+[outputs]
+home = ["HTML", "RSS"]
+[minify]
+minifyOutput = true
+enableRobotsTXT = true
+enableFingerprinting = true
+[taxonomies]
+
+```
+</details>
+
+- If you chose option 2, execute the following command:
   ```shell
     $ echo 'theme = "uniport-h"' >> config.toml
   ```
