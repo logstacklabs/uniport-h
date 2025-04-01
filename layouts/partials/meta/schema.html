@@ -4,18 +4,18 @@
   "@type": "Person",
   {{- printf "\"%s\": \"%s\"," "url" .Site.BaseURL | safeJS -}}
   {{- with .Site.Params -}}
-      {{- printf "\"%s\": \"%s %s\"" "name" .FirstName .LastName | safeJS -}}
-      {{- printf "\"%s\": \"%s\"," "image" "img/avatar.png" | safeJS -}}
-      {{- printf "\"%s\": \"%s\"," "description" .SiteDescription | safeJS -}}
-      {{- if (and .Jobtitle .Organization) -}}
-          {{- printf "\"jobTitle\": \"%s\"," .JobTitle | safeJS -}}
-          "worksFor": {
-            {{- printf "\"%s\": \"%s\"," "@type" "Organization" | safeJS -}}
-            {{- printf "\"%s\": \"%s\"" "name" .Organization | safeJS -}}
-          },
+      {{ printf "\"name\": \"%s %s\", " .FirstName .LastName | safeJS }}
+      {{ printf "\"image\": \"img/avatar.png\", " | safeJS }}
+      {{ printf "\"description\": \"%s\"," .SiteDescription | safeJS }}
+      {{- if (and .Jobtitle .Organization) }}
+          {{- printf "\"jobTitle\": \"%s\"," .JobTitle | safeJS }}
+      "worksFor": {
+        {{- printf "\"%s\": \"%s\"," "@type" "Organization" | safeJS -}}
+        {{- printf "\"%s\": \"%s\"" "name" .Organization | safeJS -}}
+      },
       {{- end -}}
       {{- if (and .Education .Institution) -}}
-        "alumniOf": {
+      "alumniOf": {
             {{- printf "\"%s\": \"%s\"," "@type" "CollegeOrUniversity" | safeJS -}}
             {{- printf "\"%s\": \"%s\"," "name" .Institution | safeJS -}}
             {{- printf "\"%s\": \"%s\"" "degree" .Education | safeJS -}}
