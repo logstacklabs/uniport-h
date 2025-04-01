@@ -11,59 +11,60 @@ title = "" # Replace with the title of your site
 # then change the value of the parameter 'defaultTitle' to true.
 [params]
     defaultTitle = false
+    FirstName = ''
+    LastName = ''
+    skills = ['', '', '', '']
+    SiteDescription = ''
 
-    FirstName = ""
-    LastName = ""
-    Skills = [ "", "" ]
-    SiteDescription = ""
+    JobTitle = ''
+    Organization = ''
 
-    JobTitle = ""
-    Organization = ""
-
-    Education = ""
-    Institution = ""
+    Education = ''
+    Institution = ''
 
 # Rename your avatar to avatar.png and logo to brand.png.
 # place them in the `static/img` directory then run the npm install command
-# If you want to link your resume, name the resume file `resume.pdf`
-# And place the file in the `static/resources` directory.
+# If you want to link your resume, name the resume assets `resume.pdf`
+# And place the assets in the `static/resources` directory.
 
 [params.Profile]
-    Greetings = "Howdy!"
-    Summary = [
-        "Paragraph 1",
-        "Paragraph 2"
-    ]
-    Email = ""
+Greetings = '!'
+summary = [
+    'Paragraph 1',
+    'Paragraph 2'
+]
+Email = ''
 
 [params.rssFeed]
 # If you have a blog that you want to embed to your site
 # Specify the RSS feed url of your blog (ie: https://blog.com/feed.xml)
 # The 3 most recent post from your site will be displayed.
-    Url = ""
+    Url = ''
 
 [params.Socials]
 # Place your entire social url as shown below.
-    GitHub = "https://github.com/your_handle"
+    GitHub = 'https://github.com/your_handle'
 # If you don't want to display a social icon, leave it empty ''
-    LinkedIn = ""
+    LinkedIn = ''
 # If you want to add more social links to it, makesure the icons are available
 # in the fontawesome fab / fa-brand icon repository.
 
 [params.Footer]
 # Name to show in the copyright message
-    ccName = ""
-# Displays: ©️${CurrentYear}, ${YourName}. Some Rights Reserved
+    ccName = ''
+    ccEmail = ''
+# Displays: ©️${CurrentYear}, ${ccName}. Some Rights Reserved
 
-[params.googleAnalytics]
-# Replace the id below with your google analytics measurement ID
-    Id = "G-XXXXXXXXXX"
+[params.analytics]
+# Replace the id below with your google analytics measurement ID and goatcounter ID
+GoatCounter = ''
+GoogleAnaltics = ''
 
 
 
 # Do not edit
 [outputs]
-    home = ["HTML", "RSS"]
+home = ['HTML', 'RSS']
 [minify]
     minifyOutput = true
 enableRobotsTXT = true

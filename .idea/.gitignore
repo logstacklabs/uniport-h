@@ -11,5 +11,6 @@
 /inspectionProfiles
 /jsLibraryMappings.xml
 
+../layouts/partials/meta/csp.html
 ../node_modules/
 ../package-lock.json
