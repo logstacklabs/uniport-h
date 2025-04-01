@@ -112,3 +112,4 @@ Preview your site at [localhost:1313](http://localhost:1313).
 - [FONT AWESOME](https://fontawesome.com/)
 - [Brian Yu](https://brianyu.me)
 - [CANVA](https://canva.com)
+
