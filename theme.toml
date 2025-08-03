@@ -1,14 +1,18 @@
-name = "Uniport-H"
-version = "1.0.0"
-description = "A simple, lightweight & customizable, HUGO portfolio theme."
-homepage = "https://github.com/msio808/uniport-h.git"
-license = "CC BY-NC-SA 4.0"
-licenselink = "https://github.com/msio808/uniport-h/blob/main/LICENSE"
-tags = [ "clean", "starter", "onepage", "about me", "personal", "portfolio" ]
-features = [ "Lightweight", "RSS Integration", "Single Page Layout", "Google Analytics Support" ]
+name = 'Uniport-H'
+version = '1.0.0'
+description = 'A simple, lightweight & customizable, HUGO portfolio theme.'
+homepage = 'https://github.com/logstacklabs/uniport-h.git'
+license = 'CC BY-NC-SA 4.0'
+licenselink = 'https://github.com/logstacklabs/uniport-h/blob/main/LICENSE'
+tags = [ 'clean', 'starter', 'onepage', 'about me', 'personal', 'portfolio' ]
+features = [ 'Lightweight', 'RSS Integration', 'Single Page Layout', 'Google Analytics Support' ]
 
-min_version = "0.123.0"
+min_version = '0.148.0'
 
-[author]
-  name = "Muhammed A."
-  homepage = "https://msio.me"
+[[author]]
+    name = 'Muhammed A.'
+    homepage = 'https://msio.me'
+
+[[author]]
+    name = 'Logstack Labs'
+    homepage = 'https://logstack.dev'

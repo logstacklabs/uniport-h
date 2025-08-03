@@ -25,7 +25,6 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 ## 🚀 Demo
 - Demo [links]()
   - [🔗 Demo website](https://uniport-h.msio.me/)
-  - [🔗 My own website](https://msio.me/)
 
 | 📸 Screenshots                   |
 |----------------------------------|
@@ -37,9 +36,7 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 
 > ### Prerequisites:
 > - Git
-> - nodejs & npm
-> - npm sharp v0.33.5
-> - Hugo _(minimum v0.123.0)_
+> - Hugo _(minimum v0.148.0)_
 
 1. This theme is available as a template.
    - Click on the <kbd>Use this template</kbd> button and then select <kbd>Create a new repository</kbd>.
@@ -58,35 +55,29 @@ The design is partly inspired by [Brian Yu's Website](https://brianyu.me)
 
 After completing any of the steps above:
 - In the `static/img` directory, place your avatar namef avatar.png & logo named brand.png.
-- Move the [config.toml](../.idea/config.toml) file from the [.idea/](../.idea) directory to your site's root directory.
+- Move the [hugo.toml](../.idea/hugo.toml) file from the [.idea/](../.idea) directory to your site's root directory.
 - If you chose option 2 add the theme name in the config.toml file with the following command:
   ```shell
-    $ echo 'theme = "uniport-h"' >> config.toml
+    $ echo "theme = 'uniport-h'" >> hugo.toml
   ```
-
-- Run the following command to generate favicons, twittercard & opengraph images for your site
-  ```shell
-  npm install
-  ```
-This will install the required package/s to generate favicons and twittercard & opengraph images
-
-When you're done, run either of the following command:
-
 - To live preview your site
   ```shell
-  npm run preview
+  hugo server
   ```
 - To build your hugo site
   ```shell
-  npm run build
-  ```
-- Or if you have sharp installed but you haven't generated favicons yet:
-  ```sh
-  npm run favicons
+  hugo
   ```
 
 Preview your site at [localhost:1313](http://localhost:1313).
 
+To update, run the following commands:
+```shell
+cd themes/uniport-h && git pull origin main && cd ../..
+```
+```shell
+git submodule update --remote --rebase
+```
 ## 🍰 Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 - Check out this guide [link](https://daily.dev/blog/how-to-contribute-to-open-source-github-repositories)
