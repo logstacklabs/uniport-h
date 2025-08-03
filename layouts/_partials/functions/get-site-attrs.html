@@ -1,0 +1,78 @@
+{{ $site := . }}
+{{ $attrs := dict }}
+
+{{ $logo := partial "functions/resolve-image.html" (dict
+        "img" .Site.Params.config.logo "width" 500 "height" 500) }}
+{{ $avatar := partial "functions/resolve-image.html" (dict
+        "img" .Site.Params.config.avatar "width" 500 "height" 500) }}
+
+{{ $seo := .Site.Params.config.seo }}
+{{ $imgName := printf "opengraph%s" (path.Ext $seo.opengraphImage) }}
+{{ $ogImage := partial "functions/resolve-image.html" (dict
+        "img" $seo.opengraphImage "width" 1200 "height" 630 "newName" $imgName) }}
+
+{{ $imgName = printf "twittercard%s" (path.Ext $seo.twitterCardImage) }}
+{{ $tcImage := partial "functions/resolve-image.html" (dict
+        "img" $seo.twitterCardImage "width" 1200 "height" 628 "newName" $imgName) }}
+
+{{ $images := dict
+        "logo"      $logo.url
+        "avatar"    $avatar.url
+        "og_image"  $ogImage.url
+        "tc_image"  $tcImage.url
+}}
+
+{{ $dateFormat := "2006-01-02T15:04:05-07:00" }}
+{{ $skillset := .Site.Params.skills }}
+{{ $keywords := .Site.Params.keywords | default $skillset }}
+{{ $authorName := .Site.Params.firstName }}
+{{ $email := .Site.Params.profile.email }}
+{{ $description := .Site.Params.description }}
+{{ $ccEmail := .Site.Params.footer.ccEmail | default $email }}
+{{ $ccHolder := .Site.Params.footer.ccName | default ($authorName | default .Site.Title) }}
+
+{{ $edu := dict
+        "title" .Site.Params.education.title
+        "institution" .Site.Params.education.institution
+}}
+{{ $job := dict
+        "title" .Site.Params.job.title
+        "company" .Site.Params.job.company
+}}
+
+{{ $twitterHandle := $seo.twitterHandle }}
+{{ if not $twitterHandle }}
+    {{ $twitterHandle = (or .Site.Params.socials.twitter .Site.Params.socials.x) }}
+{{ end }}
+
+{{ $socialUrls := slice }}
+{{ $socialsMap := partial "functions/map-social-urls.html" .Site.Params.socials }}
+{{ range $socialsMap }}
+    {{ $socialUrls = $socialUrls | append .url }}
+{{ end }}
+
+{{ $attrs = merge $attrs (dict
+        "url"                   .Site.BaseURL
+        "images"                $images
+        "title"                 .Site.Title
+        "author"                $authorName
+        "description"           $description
+        "keywords"              $keywords
+        "language_code"         ((replace .Site.Language.LanguageCode "-" "_") | default "en_US")
+        "language_dir"          (site.Language.LanguageDirection | default "ltr")
+        "site_title"            (printf "%s | %s" $authorName ($job.title | default .Site.Title))
+        "job_title"             $job.title
+        "company"               $job.company
+        "institution"           $edu.institution
+        "email"                 $email
+        "skills"                $skillset
+        "socials"               $socialUrls
+        "copyright_year"        now.Year
+        "copyright_email"       $ccEmail
+        "copyright_holder"      $ccHolder
+        "twitter_handle"        $twitterHandle
+        "fb_admins"             $seo.fbAdminsId
+        "date_modified"         (.Lastmod | time.Format $dateFormat)
+        "date_published"        (.PublishDate | time.Format $dateFormat)) }}
+
+{{ return $attrs }}

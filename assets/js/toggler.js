@@ -2,26 +2,27 @@
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
-let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
 const updateTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
-    themeIcon.className = (theme === "dark") ? "fa-solid fa-toggle-on fa-xl" : "fa-solid fa-toggle-off fa-xl";
-    //themeIcon.classList.toggle(icon);
+    const baseClass = 'fa-solid fa-xl fa-';
+    themeIcon.className = baseClass + ((theme === "light") ? 'toggle-off' : 'toggle-on');
 };
 
-updateTheme(currentTheme);
+const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+updateTheme(savedTheme);
 document.documentElement.style.visibility = 'visible'; // Remove FOUC guard
 
 themeToggle.addEventListener('click', () => {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    updateTheme(currentTheme);
-    localStorage.setItem('theme', currentTheme);
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    updateTheme(newTheme);
 });
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches }) => {
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', ({ matches }) => {
     if (!localStorage.getItem('theme')) {
-        currentTheme = matches ? 'dark' : 'light';
+        const currentTheme = matches ? 'light' : 'dark';
         updateTheme(currentTheme);
     }
 });

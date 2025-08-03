@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{ with .Site.Params.profile }}
+        <section class="summary">
+            {{ partial "profile.html" . }}
+        </section>
+    {{ end }}
+    {{ with .Site.Params.rssFeed.Url }}
+        <section class="rss-feed">
+            {{ partial "rssfeed.html" . }}
+        </section>
+    {{ end }}
+{{ end }}

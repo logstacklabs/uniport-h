@@ -1,0 +1,19 @@
+{{ with .Site.Params.socials }}
+    {{ $socials := partial "functions/map-social-urls.html" . }}
+    <p>Follow my socials</p>
+    <div>
+        {{ range $socials }}
+            <a href="{{ .url }}" title="{{ .title }}"><i id="social-icon" class="{{ .icon }}"></i></a>
+        {{ end }}
+    </div>
+{{ end }}
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+    <i id="theme-icon" class="fa-solid fa-xl fa-toggle-off"></i>
+</button>
+<p class="copyrights">&copy; {{ now.Year }}, <a href="mailto:{{ .Site.Params.footer.ccEmail }}">{{ .Site.Params.footer.ccName | default site.Title }}</a>. Some rights reserved.</p>
+<p xmlns:cc="https://creativecommons.org/ns#" xmlns:dct="https://purl.org/dc/terms/" class="credits">
+    <a property="dct:title" rel="cc:attributionURL" href="https://github.com/logstacklabs/uniport-h">UNIPORT</a> by
+    <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://logstack.dev">LOGSTACK LABS</a> |
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer">CC BY-NC-SA 4.0
+    </a> | Powered by <a href="https://gohugo.io" target="_blank">Hugo</a>
+</p>

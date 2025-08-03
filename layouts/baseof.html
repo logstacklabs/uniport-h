@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{{- $theme := .Site.Params.config.theme | default "auto" }}
+{{- $lang := site.Language.LanguageCode | default `en_US` }}
+{{- $dir := site.Language.LanguageDirection | default `ltr` }}
+{{/*- $nonce := printf "%s" (sha256 (now.UnixNano)) -}}
+{{- .Store.Set "nonce" $nonce -*/}}
+<html lang="{{ $lang }}" dir="{{ $dir }}" data-theme="{{ $theme }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+
+        <base href="{{ .Site.BaseURL }}" target="_blank">
+        <title>{{ printf "%s | %s" .Site.Params.firstName (.Site.Params.job.title | default .Site.Title) }}</title>
+
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <header>
+            {{ partial "header.html" . }}
+        </header>
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+        <footer>
+            {{ partial "footer.html" . }}
+        </footer>
+        {{ partialCached "head/js.html" . }}
+    </body>
+</html>

@@ -1,0 +1,9 @@
+{{ with .Site.Params }}
+    {{ $avatar := partial "functions/resolve-image.html" (dict "img" .config.avatar "width" 160 "height" 160) }}
+    <img src="{{ $avatar.url }}" width="{{ $avatar.width }}" height="{{ $avatar.height }}" alt="Avatar of {{ .firstName }}" class="avatar" loading="lazy">
+    <h1>
+        {{ $logo := partial "functions/resolve-image.html" (dict "img" (or .config.logo .config.favicon) "width" 40 "height" 40) }}
+        <img src="{{ $logo.url }}" width="{{ $logo.width }}" height="{{ $logo.height }}" alt="{{ .firstName }} brand logo" class="logo" loading="lazy">
+        <span class="name">{{ .firstName }} <b>{{ .lastName }}</b></span>
+    </h1>
+{{ end }}

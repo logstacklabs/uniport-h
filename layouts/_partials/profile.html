@@ -1,0 +1,22 @@
+{{ $profile := . }}
+{{ with $profile }}
+    <h2>{{ .greetings | default "Hello!..." }}</h2>
+    {{ range .summary }}
+        <p>{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ $resume := .resume }}
+    {{ with $resume }}
+        <div class="resume-container">
+            {{ with resources.Get . }}
+                {{ $resume = .RelPermalink }}
+            {{ end }}
+            <a class="resume-button" href="{{ $resume | relURL }}">
+                See My Resume <i class="fa-solid fa-file-pdf"></i></a>
+        </div>
+    {{ end }}
+
+    {{ with .Email }}
+        <p>Contact me at <a href="mailto:{{ . }}">{{ . }}</a></p>
+    {{ end }}
+{{ end }}
